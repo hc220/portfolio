@@ -17,6 +17,15 @@ interface Project {
 const projects: Project[] = [
   {
     id: 1,
+    title: "Analytics Pro",
+    description: "A powerful sales dashboard with real-time tracking, interactive charts, and advanced data filtering. 🚀📊.",
+    tags: ["React", "Tailwind", "Chat.js"],
+    image: "https://img.freepik.com/free-vector/admin-dashboard-panel-with-gradient-style_23-2147870030.jpg",
+    githubLink: "https://github.com/hc220/AnalyticsPro.git",
+    liveLink: "https://analytics-pro-phi.vercel.app/",
+  },
+  {
+    id: 2,
     title: "KisanBazaar",
     description: "A marketplace connecting farmers directly to consumers, eliminating middlemen and ensuring fair prices.",
     tags: ["Figma", "Wireframes", "UI/UX Design", "Mobile App Design"],
@@ -25,21 +34,13 @@ const projects: Project[] = [
     dribbbleLink: "https://dribbble.com/shots/25770692-KisanBazaar",
   },
   {
-    id: 2,
+    id: 3,
     title: "QuickMeet UI",
     description: "A modern, intuitive video conferencing interface with focus on accessibility and ease of use.",
     tags: ["Figma", "UI/UX Design", "Web Design", "Responsive Design"],
     image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
     liveLink: "https://quickmeet.w3spaces.com/index.html",
     githubLink: "https://github.com/hc220/QuickMeett.git",
-  },
-  {
-    id: 3,
-    title: "Netflix Data Visualization",
-    description: "Analyzing Netflix data with visualizations! I recently worked on a Netflix Data Analysis Project, exploring content trends, popular categories, and key contributors.",
-    tags: ["Python", "Pandas", "Matplotlib", "Data Analysis"],
-    image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1",
-    githubLink: "https://github.com/hc220/-Netflix-Data-Visualization-A-Mini-Project-.git",
   },
   {
     id: 4,
@@ -49,6 +50,7 @@ const projects: Project[] = [
     image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1",
     githubLink: "https://github.com/hc220/-Netflix-Data-Visualization-A-Mini-Project-.git",
   },
+  
 ];
 
 const Projects = () => {
