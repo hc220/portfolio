@@ -41,6 +41,14 @@ const projects: Project[] = [
     image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1",
     githubLink: "https://github.com/hc220/-Netflix-Data-Visualization-A-Mini-Project-.git",
   },
+  {
+    id: 4,
+    title: "Netflix Data Visualization",
+    description: "Analyzing Netflix data with visualizations! I recently worked on a Netflix Data Analysis Project, exploring content trends, popular categories, and key contributors.",
+    tags: ["Python", "Pandas", "Matplotlib", "Data Analysis"],
+    image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1",
+    githubLink: "https://github.com/hc220/-Netflix-Data-Visualization-A-Mini-Project-.git",
+  },
 ];
 
 const Projects = () => {
