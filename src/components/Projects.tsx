@@ -20,7 +20,7 @@ const projects: Project[] = [
     title: "FireNoc",
     description: "Built a responsive FireNOC web app featuring chatbot assistance, Firebase backend, and real-time status tracking for certificate applications.currently working on it",
     tags: ["React", "Tailwind", "Firebase",],
-    image: "https://img.freepik.com/free-vector/admin-dashboard-panel-with-gradient-style_23-2147870030.jpg",
+    image: "https://img.freepik.com/free-vector/hand-drawn-fire-prevention-illustration_23-2149129195.jpg?semt=ais_hybrid&w=740",
     githubLink: "https://github.com/hc220/NOC.git",
     liveLink: "https://noc-rose.vercel.app/",
   }, 
