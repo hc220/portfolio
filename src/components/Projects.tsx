@@ -17,6 +17,15 @@ interface Project {
 const projects: Project[] = [
   {
     id: 1,
+    title: "FireNoc",
+    description: "Built a responsive FireNOC web app featuring chatbot assistance, Firebase backend, and real-time status tracking for certificate applications.currently working on it",
+    tags: ["React", "Tailwind", "Firebase",],
+    image: "https://img.freepik.com/free-vector/admin-dashboard-panel-with-gradient-style_23-2147870030.jpg",
+    githubLink: "https://github.com/hc220/NOC.git",
+    liveLink: "https://noc-rose.vercel.app/",
+  }, 
+  {
+    id: 2,
     title: "Analytics Pro",
     description: "A powerful sales dashboard with real-time tracking, interactive charts, and advanced data filtering. 🚀📊.",
     tags: ["React", "Tailwind", "Chat.js"],
@@ -25,7 +34,7 @@ const projects: Project[] = [
     liveLink: "https://analytics-pro-phi.vercel.app/",
   },
   {
-    id: 2,
+    id: 3,
     title: "KisanBazaar",
     description: "A marketplace connecting farmers directly to consumers, eliminating middlemen and ensuring fair prices.",
     tags: ["Figma", "Wireframes", "UI/UX Design", "Mobile App Design"],
@@ -34,7 +43,7 @@ const projects: Project[] = [
     dribbbleLink: "https://dribbble.com/shots/25770692-KisanBazaar",
   },
   {
-    id: 3,
+    id: 4,
     title: "QuickMeet UI",
     description: "A modern, intuitive video conferencing interface with focus on accessibility and ease of use.",
     tags: ["Figma", "UI/UX Design", "Web Design", "Responsive Design"],
