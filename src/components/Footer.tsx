@@ -39,7 +39,7 @@ const Footer = () => {
                 Harshil Patel
               </motion.div>
               <p className="text-muted-foreground text-sm leading-relaxed">
-                React & UI/UX Developer passionate about creating exceptional 
+               Developer & Designer passionate about creating exceptional 
                 digital experiences and realtime applications.
               </p>
               <div className="flex items-center gap-2 text-sm text-muted-foreground">
@@ -73,7 +73,7 @@ const Footer = () => {
                   href="mailto:harshil.patel@example.com"
                   className="block text-muted-foreground hover:text-primary transition-colors text-sm"
                 >
-                  harshil.patel@example.com
+                  harshil220205@gmail.com
                 </a>
                 <p className="text-muted-foreground text-sm">
                   Available for freelance projects and collaborations
