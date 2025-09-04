@@ -56,6 +56,8 @@ const Projects = () => {
       ],
       type: "React Based Project",
       status: "Complete",
+      github: "https://github.com/hc220/leet-logbook.git",
+      live: "https://leet-logbook-f5kv.vercel.app/"
     }
   ];
 
