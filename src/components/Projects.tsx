@@ -41,6 +41,21 @@ const Projects = () => {
       ],
       type: "AI Innovation",
       status: "Production",
+    },
+      {
+      title: "LeetLogBook",
+      subtitle: "Track your progress. Level up your coding.",
+      description: "LeetLogBook makes coding practice smarter by letting you log problems, track progress, and revisit solutions easily. Stay organized, stay consistent, and level up your coding journey.",
+      icon: Shield,
+      color: "from-green-500 to-teal-600",
+      technologies: ["React Js", "Tailwind", "Supabase"],
+      achievements: [
+        "Built and deployed a live coding log platform.",
+        "Added progress tracking by topic & difficulty.",
+        "Designed a clean, user-friendly interface.",
+      ],
+      type: "React Based Project",
+      status: "Complete",
     }
   ];
 
