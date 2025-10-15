@@ -86,7 +86,7 @@ const Hero = () => {
               Get in Touch
             </Button>
 
-            <a href="https://drive.google.com/file/d/1G8is_YYLUUgjHWPD0cEDv5m9SlEdV2Ke/view?usp=sharing" download>
+            <a href="https://drive.google.com/file/d/1-BbCMhbrOx6Zt_DPWJRxsqoA1nXuYu1n/view?usp=drive_link" download>
               <Button
                 variant="outline"
                 className="border-white/20 bg-white/5 hover:bg-white/10 backdrop-blur-sm px-8 py-6 text-lg rounded-2xl hover-scale"
