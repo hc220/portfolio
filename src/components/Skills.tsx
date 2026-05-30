@@ -14,44 +14,72 @@ const Skills = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
-  const skillCategories = [
-    {
-      title: "Frontend",
-      icon: Code,
-      color: "from-blue-500 to-cyan-500",
-      skills: ["React", "Flutter", "TypeScript", "Tailwind CSS", "Framer Motion", "HTML/CSS"]
-    },
-    {
-      title: "Backend",
-      icon: Server,
-      color: "from-green-500 to-emerald-500",
-      skills: ["Node.js", "Java", "Python"]
-    },
-    {
-      title: "Database",
-      icon: Database,
-      color: "from-purple-500 to-violet-500",
-      skills: ["Firebase", "Supabase", "SQL"]
-    },
-    {
-      title: "Data Science",
-      icon: Radio,
-      color: "from-red-500 to-pink-500",
-      skills: ["Pandas", "Numpy", "Data Cleaning", "Data mining"]
-    },
-    {
-      title: "Design",
-      icon: Palette,
-      color: "from-orange-500 to-yellow-500",
-      skills: ["Figma", "UI/UX Design", "Design Systems", "Prototyping", "User Research"]
-    },
-    {
-      title: "Tools",
-      icon: Wrench,
-      color: "from-gray-500 to-slate-500",
-      skills: ["Git", "Vercel", "VS Code", "Windsurf"]
-    }
-  ];
+const skillCategories = [
+  {
+    title: "Frontend",
+    icon: Code,
+    color: "from-blue-500 to-cyan-500",
+    skills: [
+      "React.js",
+      "JavaScript",
+      "TypeScript",
+      "HTML5",
+      "CSS3",
+      "Tailwind CSS",
+      "Material UI",
+      "Framer Motion",
+    ],
+  },
+  {
+    title: "Backend",
+    icon: Server,
+    color: "from-green-500 to-emerald-500",
+    skills: [
+      "Java",
+      "Spring Boot",
+      "Node.js",
+      "Express.js",
+      "REST API",
+      "JWT",
+    ],
+  },
+  {
+    title: "Database",
+    icon: Database,
+    color: "from-purple-500 to-violet-500",
+    skills: [
+      "MySQL",
+      "MongoDB",
+      "Firebase",
+      "Supabase",
+    ],
+  },
+  {
+    title: "UI/UX Design",
+    icon: Palette,
+    color: "from-orange-500 to-yellow-500",
+    skills: [
+      "Figma",
+      "Wireframing",
+      "Prototyping",
+      "Design Systems",
+      "User Research",
+    ],
+  },
+  {
+    title: "Tools & DevOps",
+    icon: Wrench,
+    color: "from-gray-500 to-slate-500",
+    skills: [
+      "Git",
+      "GitHub",
+      "VS Code",
+      "Postman",
+      "Vercel",
+      "Netlify",
+    ],
+  },
+];
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -104,52 +132,71 @@ const Skills = () => {
           </motion.div>
 
           {/* Skills Grid */}
-          <motion.div
-            variants={containerVariants}
-            className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+  {skillCategories.map((category) => (
+    <motion.div
+      key={category.title}
+      whileHover={{ y: -8 }}
+      className="
+        relative overflow-hidden
+        rounded-3xl
+        border border-white/10
+        bg-white/[0.03]
+        backdrop-blur-xl
+        p-6
+        transition-all duration-300
+        hover:border-primary/30
+        hover:shadow-2xl
+      "
+    >
+      <div
+        className={`absolute inset-0 bg-gradient-to-br ${category.color} opacity-[0.05]`}
+      />
+
+      <div className="relative z-10">
+        <div className="flex items-center gap-4 mb-6">
+          <div
+            className={`p-3 rounded-2xl bg-gradient-to-br ${category.color}`}
           >
-            {skillCategories.map((category, index) => (
-              <motion.div
-                key={category.title}
-                variants={itemVariants}
-                whileHover={{ y: -8, scale: 1.02 }}
-                className="glass-card p-8 rounded-3xl group hover:shadow-glow transition-all duration-500 relative overflow-hidden"
-              >
-                {/* Background Gradient */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${category.color} opacity-0 group-hover:opacity-5 transition-opacity duration-500`} />
-                
-                {/* Header */}
-                <div className="flex items-center gap-4 mb-6 relative z-10">
-                  <div className={`p-3 rounded-2xl bg-gradient-to-br ${category.color} shadow-lg group-hover:scale-110 transition-transform duration-300`}>
-                    <category.icon className="h-6 w-6 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold group-hover:text-primary transition-colors duration-300">
-                    {category.title}
-                  </h3>
-                </div>
+            <category.icon className="w-6 h-6 text-white" />
+          </div>
 
-                {/* Skills List */}
-                <motion.div className="space-y-3 relative z-10">
-                  {category.skills.map((skill, skillIndex) => (
-                    <motion.div
-                      key={skill}
-                      variants={skillVariants}
-                      initial="hidden"
-                      animate={isInView ? "visible" : "hidden"}
-                      transition={{ delay: index * 0.1 + skillIndex * 0.05 }}
-                      className="flex items-center gap-3 group/skill"
-                    >
-                      <div className={`w-2 h-2 rounded-full bg-gradient-to-r ${category.color} group-hover/skill:scale-125 transition-transform duration-200`} />
-                      <span className="text-muted-foreground group-hover/skill:text-foreground transition-colors duration-200">
-                        {skill}
-                      </span>
-                    </motion.div>
-                  ))}
-                </motion.div>
-              </motion.div>
-            ))}
-          </motion.div>
+          <div>
+            <span className="text-xs uppercase tracking-widest text-primary">
+              Expertise
+            </span>
 
+            <h3 className="text-xl font-bold mt-1">
+              {category.title}
+            </h3>
+          </div>
+        </div>
+
+        <div className="flex flex-wrap gap-3">
+          {category.skills.map((skill) => (
+            <motion.span
+              key={skill}
+              whileHover={{ scale: 1.05 }}
+              className="
+                px-4 py-2
+                rounded-xl
+                bg-white/5
+                border border-white/10
+                text-sm
+                font-medium
+                hover:border-primary/40
+                hover:bg-primary/10
+                transition-all duration-300
+              "
+            >
+              {skill}
+            </motion.span>
+          ))}
+        </div>
+      </div>
+    </motion.div>
+  ))}
+</div>
           {/* Bottom CTA */}
           <motion.div
             variants={itemVariants}
@@ -160,7 +207,7 @@ const Skills = () => {
                 Always learning and exploring new technologies
               </p>
               <div className="flex flex-wrap justify-center gap-2">
-                {["LLM", "AI/ML", "Cloud Computing"].map((tech) => (
+                {["Frontend", "Frame Work", "Cloud Computing"].map((tech) => (
                   <span
                     key={tech}
                     className="px-3 py-1 text-sm bg-gradient-primary/10 text-primary rounded-full border border-primary/20"
