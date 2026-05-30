@@ -1,45 +1,39 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { Calendar, MapPin, TrendingUp, Users, Zap, Award } from "lucide-react";
+import { Calendar, MapPin, TrendingUp, Users, Zap } from "lucide-react";
 
 const Experience = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
-const experiences = [
-  {
-    company: "Valens DataLabs Pvt Ltd",
-    role: "Jr. Software Scientist Intern",
-    type: "Internship",
-    timeline: "Jan 2026 - Present",
-    location: "Ahmedabad, Gujarat",
-    description:
-      "Working on full-stack web applications, frontend development, UI implementation, feature optimization, and collaborating with development teams on real-world enterprise products.",
-    highlights: [
-      "Developed responsive user interfaces using React.js",
-      "Worked on real-world enterprise applications",
-      "Collaborated with cross-functional development teams",
-      "Implemented feature enhancements and optimizations",
-      "Designed end-to-end workflows with customization and filtering"
-    ]
-  },
-  {
+  const internship = {
     company: "Microsoft Corporation (India) Pvt Ltd",
-    role: "Microsoft Data & AI Skills Internship",
+    role: "Summer Interns - Microsoft Data & AI Skills Internship Program",
     type: "Internship",
-    timeline: "15 Days",
+    timeline: "15 Day",
     location: "Remote",
-    description:
-      "Completed Microsoft Data & AI internship focused on Azure AI, NLP, Generative AI, Machine Learning, and Power BI technologies.",
+    description: "Responsible for learning and applying Microsoft Data & AI technologies, including Azure AI, NLP, Generative AI, and Power BI, through instructor-led training and practical assessments.",
     highlights: [
-      "Azure AI Fundamentals (AI-900)",
-      "Natural Language Processing with Azure AI",
-      "Generative AI using Azure Machine Learning",
-      "Microsoft Power BI Data Analysis (PL-300)"
+      {
+        icon: TrendingUp,
+        title: "Azure AI Fundamentals (AI-900)",
+        
+      },
+      {
+        icon: Users,
+        title: "Build a natural language processing (NLP) solution with Azure AI Language",
+      },
+      {
+        icon: Zap,
+        title: "Generative artificial intelligence (AI) models in Azure Machine Learning",
+      },
+       {
+        icon: Zap,
+        title: "Microsoft Power BI Data Analysis (PL-300)",
+      }
     ]
-  }
-];
+  };
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -108,66 +102,75 @@ const experiences = [
                 className="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-6 h-6 bg-gradient-primary rounded-full border-4 border-background shadow-glow z-10"
               />
 
-             <div className="space-y-12">
-  {experiences.map((exp, index) => (
-    <motion.div
-      key={exp.company}
-      variants={itemVariants}
-      className="relative"
-    >
-      <div className="grid lg:grid-cols-2 gap-8">
-        {/* Left Card */}
-        <motion.div
-          whileHover={{ y: -5 }}
-          className="glass-card p-8 rounded-3xl"
-        >
-          <span className="px-3 py-1 rounded-full bg-primary/10 text-primary text-sm">
-            {exp.type}
-          </span>
+              <div className="grid lg:grid-cols-2 gap-12 items-start">
+                {/* Main Experience Card */}
+                <motion.div
+                  whileHover={{ scale: 1.02, y: -5 }}
+                  className="glass-card p-8 rounded-3xl shadow-glow"
+                >
+                  <div className="space-y-6">
+                    {/* Header */}
+                    <div>
+                      <h3 className="text-2xl font-bold gradient-text mb-2">
+                        {internship.role}
+                      </h3>
+                      <h4 className="text-xl font-semibold text-foreground mb-1">
+                        {internship.company}
+                      </h4>
+                      <div className="inline-block px-3 py-1 bg-gradient-primary/20 text-primary rounded-full text-sm font-medium border border-primary/30">
+                        {internship.type}
+                      </div>
+                    </div>
 
-          <h3 className="text-2xl font-bold mt-4">
-            {exp.role}
-          </h3>
+                    {/* Timeline & Location */}
+                    <div className="space-y-3">
+                      <div className="flex items-center gap-2 text-muted-foreground">
+                        <Calendar className="h-4 w-4" />
+                        <span>{internship.timeline}</span>
+                      </div>
+                      <div className="flex items-center gap-2 text-muted-foreground">
+                        <MapPin className="h-4 w-4" />
+                        <span>{internship.location}</span>
+                      </div>
+                    </div>
 
-          <h4 className="text-lg text-primary mt-2">
-            {exp.company}
-          </h4>
+                    {/* Description */}
+                    <p className="text-muted-foreground leading-relaxed">
+                      {internship.description}
+                    </p>
 
-          <div className="flex flex-col gap-2 mt-4 text-muted-foreground">
-            <div className="flex items-center gap-2">
-              <Calendar size={16} />
-              {exp.timeline}
-            </div>
+                    {/* Achievement Badge */}
+                    <div className="inline-flex items-center gap-2 p-3 bg-gradient-accent/10 rounded-xl border border-accent/20">
+                      <TrendingUp className="h-5 w-5 text-accent" />
+                      <span className="text-accent font-medium">Internship Completed Successfully</span>
+                    </div>
+                  </div>
+                </motion.div>
 
-            <div className="flex items-center gap-2">
-              <MapPin size={16} />
-              {exp.location}
-            </div>
-          </div>
-
-          <p className="mt-4 text-muted-foreground">
-            {exp.description}
-          </p>
-        </motion.div>
-
-        {/* Right Side */}
-        <div className="space-y-4">
-          {exp.highlights.map((item) => (
-            <div
-              key={item}
-              className="glass-card p-5 rounded-2xl"
-            >
-              <div className="flex items-center gap-3">
-                <Award className="w-5 h-5 text-primary" />
-                <span>{item}</span>
+                {/* Highlights */}
+                <div className="space-y-6 lg:mt-16">
+                  {internship.highlights.map((highlight, index) => (
+                    <motion.div
+                      key={highlight.title}
+                      variants={itemVariants}
+                      whileHover={{ x: 10, scale: 1.02 }}
+                      className="glass-card p-6 rounded-2xl group hover:shadow-glow transition-all duration-300"
+                    >
+                      <div className="flex items-start gap-4">
+                        <div className="p-2 rounded-xl bg-gradient-primary/20 group-hover:bg-gradient-primary/30 transition-colors">
+                          <highlight.icon className="h-5 w-5 text-primary" />
+                        </div>
+                        <div>
+                          <h5 className="font-semibold mb-2 group-hover:text-primary transition-colors">
+                            {highlight.title}
+                          </h5>
+                       
+                        </div>
+                      </div>
+                    </motion.div>
+                  ))}
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </motion.div>
-  ))}
-</div>
             </motion.div>
 
           </div>
