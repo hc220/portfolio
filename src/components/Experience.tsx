@@ -12,7 +12,7 @@ const experiences = [
     company: "Valens DataLabs Pvt Ltd",
     role: "Jr. Software Scientist Intern",
     type: "Internship",
-    timeline: "Jan 2026 - Present",
+    timeline: "Dec 2025 - Present",
     location: "Ahmedabad, Gujarat",
     description:
       "Working on full-stack web applications, frontend development, UI implementation, feature optimization, and collaborating with development teams on real-world enterprise products.",
