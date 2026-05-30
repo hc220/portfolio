@@ -6,7 +6,23 @@ import { Brain, Zap, Users } from "lucide-react";
 const About = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+const getExperience = (startDate) => {
+  const start = new Date(startDate);
+  const current = new Date();
 
+  let years = current.getFullYear() - start.getFullYear();
+  let months = current.getMonth() - start.getMonth();
+
+  if (months < 0) {
+    years--;
+    months += 12;
+  }
+
+  return years > 0
+    ? { value: years, isYear: true }
+    : { value: months, isYear: false };
+};
+const exp = getExperience("2025-12-01");
   const highlights = [
     {
       icon: Brain,
@@ -60,9 +76,7 @@ const About = () => {
               About <span className="gradient-text">Me</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              I'm a passionate developer who thrives at the intersection of design and code. 
-              With a focus on creating exceptional user experiences, I combine technical expertise 
-              with product thinking to build applications that make a real impact.
+             I'm a passionate React.js and Java Full Stack Developer dedicated to building modern, responsive, and scalable web applications. I specialize in crafting intuitive user interfaces with React.js and developing secure, high-performance backend services using Java and Spring Boot, delivering complete end-to-end solutions.
             </p>
           </motion.div>
 
@@ -80,10 +94,7 @@ const About = () => {
                 </h3>
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
                   <p>
-                   I’m a passionate developer and enthusiast of UI/UX and AI/ML, who loves building intuitive, responsive, and impactful 
-                   digital experiences—from real-time collaboration tools to clean, user-friendly interfaces. Beyond coding, 
-                   I stay curious about design trends, contribute to projects, and explore innovative ideas that make technology simple
-                   and delightful.
+             I’m a full-stack developer specializing in React.js, Java, and Spring Boot, passionate about crafting fast, scalable, and user-focused digital experiences. From designing intuitive frontends to developing powerful backend systems, I enjoy building complete solutions that solve real-world problems. When I’m not coding, I explore emerging technologies, contribute to projects, and continuously refine my skills to stay ahead in the ever-evolving tech landscape.
                   </p>
                  
                 </div>
@@ -94,7 +105,7 @@ const About = () => {
                 <div className="relative glass-card p-8 rounded-3xl">
                   <div className="grid grid-cols-2 gap-6 text-center">
                     <div>
-                      <div className="text-3xl font-bold gradient-text">10+</div>
+                      <div className="text-3xl font-bold gradient-text">7+</div>
                       <div className="text-sm text-muted-foreground">Projects Built</div>
                     </div>
                     <div>
@@ -104,6 +115,10 @@ const About = () => {
                     <div>
                       <div className="text-3xl font-bold gradient-text">100%</div>
                       <div className="text-sm text-muted-foreground">Passion Driven</div>
+                    </div>
+                     <div>
+                      <div className="text-3xl font-bold gradient-text">{exp.value}</div>
+                      <div className="text-sm text-muted-foreground">{exp.isYear ?"Year":"Month"} Experience</div>
                     </div>
                   </div>
                 </div>
