@@ -1,139 +1,73 @@
-# 🚀 Harshil Patel - Developer Portfolio
+# Welcome to your Lovable project
 
-A modern and responsive developer portfolio built with React, TypeScript, Tailwind CSS, and Framer Motion. This portfolio showcases my skills, projects, experience, and journey as a React.js & Java Full Stack Developer.
+## Project info
 
-## 🌟 Features
+**URL**: https://lovable.dev/projects/1e8a3004-f7b7-446c-b27f-635f8644b097
 
-* Modern and responsive UI
-* Smooth animations with Framer Motion
-* Interactive project showcase
-* Skills and technology stack section
-* Professional experience timeline
-* Contact section
-* Dark theme design
-* Optimized performance and accessibility
+## How can I edit this code?
 
-## 🛠️ Tech Stack
+There are several ways of editing your application.
 
-### Frontend
+**Use Lovable**
 
-* React.js
-* TypeScript
-* JavaScript
-* Tailwind CSS
-* Framer Motion
-* shadcn/ui
+Simply visit the [Lovable Project](https://lovable.dev/projects/1e8a3004-f7b7-446c-b27f-635f8644b097) and start prompting.
 
-### Backend
+Changes made via Lovable will be committed automatically to this repo.
 
-* Java
-* Spring Boot
-* Node.js
-* Express.js
+**Use your preferred IDE**
 
-### Database
+If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
 
-* MySQL
-* MongoDB
-* Firebase
-* Supabase
+The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
 
-### Tools
+Follow these steps:
 
-* Git
-* GitHub
-* VS Code
-* Postman
-* Vercel
+```sh
+# Step 1: Clone the repository using the project's Git URL.
+git clone <YOUR_GIT_URL>
 
-## 📂 Project Structure
+# Step 2: Navigate to the project directory.
+cd <YOUR_PROJECT_NAME>
 
-```bash
-src/
-├── components/
-├── pages/
-├── assets/
-├── hooks/
-├── lib/
-├── styles/
-└── App.tsx
-```
+# Step 3: Install the necessary dependencies.
+npm i
 
-## 🚀 Getting Started
-
-### Prerequisites
-
-* Node.js (v18 or later)
-* npm
-
-### Installation
-
-Clone the repository:
-
-```bash
-git clone <repository-url>
-```
-
-Navigate to the project:
-
-```bash
-cd portfolio
-```
-
-Install dependencies:
-
-```bash
-npm install
-```
-
-Start the development server:
-
-```bash
+# Step 4: Start the development server with auto-reloading and an instant preview.
 npm run dev
 ```
 
-Build for production:
+**Edit a file directly in GitHub**
 
-```bash
-npm run build
-```
+- Navigate to the desired file(s).
+- Click the "Edit" button (pencil icon) at the top right of the file view.
+- Make your changes and commit the changes.
 
-Preview production build:
+**Use GitHub Codespaces**
 
-```bash
-npm run preview
-```
+- Navigate to the main page of your repository.
+- Click on the "Code" button (green button) near the top right.
+- Select the "Codespaces" tab.
+- Click on "New codespace" to launch a new Codespace environment.
+- Edit files directly within the Codespace and commit and push your changes once you're done.
 
-## 📈 Experience
+## What technologies are used for this project?
 
-### Jr. Software Scientist Intern
+This project is built with:
 
-Valens DataLabs Pvt Ltd
+- Vite
+- TypeScript
+- React
+- shadcn-ui
+- Tailwind CSS
 
-* Frontend development using React.js
-* UI implementation and optimization
-* Feature development and maintenance
-* Team collaboration on enterprise products
+## How can I deploy this project?
 
-### Microsoft Data & AI Skills Internship
+Simply open [Lovable](https://lovable.dev/projects/1e8a3004-f7b7-446c-b27f-635f8644b097) and click on Share -> Publish.
 
-* Azure AI Fundamentals
-* Natural Language Processing
-* Generative AI
-* Power BI Analytics
+## Can I connect a custom domain to my Lovable project?
 
-## 📬 Contact
+Yes, you can!
 
-Feel free to connect with me regarding opportunities, collaborations, or technical discussions.
+To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
 
-* LinkedIn
-* GitHub
-* Email
-
-## 📄 License
-
-This project is open-source and available under the MIT License.
-
----
-
-Built with ❤️ by Harshil Patel
+Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
