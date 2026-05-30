@@ -48,7 +48,7 @@ const Navbar = () => {
             whileHover={{ scale: 1.05 }}
             className="text-xl font-bold gradient-text"
           >
-            HP
+            Harshil Patel
           </motion.div>
 
           {/* Desktop Navigation */}
