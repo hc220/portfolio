@@ -14,14 +14,14 @@ const Education = () => {
       institution: "Government Engineering College Dahod",
       location: "Dahod, Gujarat",
       duration: "2023 - 2026",
-      grade: "CPI: 7.3/10",
+      grade: "CPI: 7.75/10",
       highlights: [
         "Learning Python and its libraries for data science",
         "Learning data mining",
         "AI/ML",
         "Actively participating in hackathons"
       ],
-      status: "Current"
+      status: "Completed"
     },
     {
       degree: "Diploma in Engineering",

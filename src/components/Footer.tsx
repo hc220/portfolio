@@ -39,14 +39,9 @@ const Footer = () => {
                 Harshil Patel
               </motion.div>
               <p className="text-muted-foreground text-sm leading-relaxed">
-               Developer & Designer passionate about creating exceptional 
-                digital experiences and realtime applications.
+              Full Stack Developer passionate about building scalable web applications, intuitive user experiences, and impactful digital products using React.js and Java.
               </p>
-              <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                <span>Made with</span>
-                <Heart className="h-4 w-4 text-red-500 fill-current" />
-                <span>and lots of ☕</span>
-              </div>
+      
             </div>
 
             {/* Navigation Links */}
