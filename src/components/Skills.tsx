@@ -19,37 +19,63 @@ const Skills = () => {
       title: "Frontend",
       icon: Code,
       color: "from-blue-500 to-cyan-500",
-      skills: ["React", "Flutter", "TypeScript", "Tailwind CSS", "Framer Motion", "HTML/CSS"]
+      skills: [
+        { name: "React", level: 92 },
+        { name: "TypeScript", level: 90 },
+        { name: "Tailwind CSS", level: 88 },
+        { name: "Framer Motion", level: 80 },
+        { name: "HTML/CSS", level: 95 }
+      ]
     },
     {
       title: "Backend",
       icon: Server,
       color: "from-green-500 to-emerald-500",
-      skills: ["Node.js", "Java", "Python"]
+      skills: [
+        { name: "Node.js", level: 80 },
+        { name: "Java", level: 70 },
+        { name: "Python", level: 72 }
+      ]
     },
     {
       title: "Database",
       icon: Database,
       color: "from-purple-500 to-violet-500",
-      skills: ["Firebase", "Supabase", "SQL"]
+      skills: [
+        { name: "Firebase", level: 82 },
+        { name: "Supabase", level: 70 },
+        { name: "SQL", level: 78 }
+      ]
     },
     {
       title: "Data Science",
       icon: Radio,
       color: "from-red-500 to-pink-500",
-      skills: ["Pandas", "Numpy", "Data Cleaning", "Data mining"]
+      skills: [
+        { name: "Pandas", level: 68 },
+        { name: "Numpy", level: 66 },
+        { name: "Data Cleaning", level: 70 }
+      ]
     },
     {
       title: "Design",
       icon: Palette,
       color: "from-orange-500 to-yellow-500",
-      skills: ["Figma", "UI/UX Design", "Design Systems", "Prototyping", "User Research"]
+      skills: [
+        { name: "Figma", level: 84 },
+        { name: "UI/UX Design", level: 82 },
+        { name: "Prototyping", level: 78 }
+      ]
     },
     {
       title: "Tools",
       icon: Wrench,
       color: "from-gray-500 to-slate-500",
-      skills: ["Git", "Vercel", "VS Code", "Windsurf"]
+      skills: [
+        { name: "Git", level: 92 },
+        { name: "Vercel", level: 76 },
+        { name: "VS Code", level: 95 }
+      ]
     }
   ];
 
@@ -112,40 +138,43 @@ const Skills = () => {
               <motion.div
                 key={category.title}
                 variants={itemVariants}
-                whileHover={{ y: -8, scale: 1.02 }}
-                className="glass-card p-8 rounded-3xl group hover:shadow-glow transition-all duration-500 relative overflow-hidden"
+                whileHover={{ y: -6, scale: 1.02 }}
+                className="glass-card p-6 rounded-2xl group hover:shadow-glow transition-all duration-500 relative overflow-hidden"
               >
-                {/* Background Gradient */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${category.color} opacity-0 group-hover:opacity-5 transition-opacity duration-500`} />
-                
-                {/* Header */}
-                <div className="flex items-center gap-4 mb-6 relative z-10">
-                  <div className={`p-3 rounded-2xl bg-gradient-to-br ${category.color} shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                <div className={`absolute inset-0 bg-gradient-to-br ${category.color} opacity-0 group-hover:opacity-6 transition-opacity duration-500`} />
+
+                <div className="flex items-center gap-4 mb-4 relative z-10">
+                  <div className={`p-3 rounded-2xl bg-gradient-to-br ${category.color} shadow-lg`}> 
                     <category.icon className="h-6 w-6 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold group-hover:text-primary transition-colors duration-300">
+                  <h3 className="text-lg font-bold group-hover:text-primary transition-colors duration-300">
                     {category.title}
                   </h3>
                 </div>
 
-                {/* Skills List */}
-                <motion.div className="space-y-3 relative z-10">
+                <div className="space-y-4 relative z-10">
                   {category.skills.map((skill, skillIndex) => (
                     <motion.div
-                      key={skill}
+                      key={skill.name}
                       variants={skillVariants}
                       initial="hidden"
                       animate={isInView ? "visible" : "hidden"}
                       transition={{ delay: index * 0.1 + skillIndex * 0.05 }}
-                      className="flex items-center gap-3 group/skill"
+                      className="space-y-2"
                     >
-                      <div className={`w-2 h-2 rounded-full bg-gradient-to-r ${category.color} group-hover/skill:scale-125 transition-transform duration-200`} />
-                      <span className="text-muted-foreground group-hover/skill:text-foreground transition-colors duration-200">
-                        {skill}
-                      </span>
+                      <div className="flex items-center justify-between text-sm">
+                        <span className="text-muted-foreground">{skill.name}</span>
+                        <span className="text-xs text-muted-foreground">{skill.level}%</span>
+                      </div>
+                      <div className="w-full h-2 bg-[rgba(255,255,255,0.06)] rounded-full overflow-hidden">
+                        <div
+                          className={`h-full rounded-full bg-gradient-to-r ${category.color} transition-all duration-700`}
+                          style={{ width: `${skill.level}%` }}
+                        />
+                      </div>
                     </motion.div>
                   ))}
-                </motion.div>
+                </div>
               </motion.div>
             ))}
           </motion.div>
